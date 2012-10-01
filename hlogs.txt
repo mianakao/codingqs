@@ -1,0 +1,101 @@
+2012-10-01T16:33:37+00:00 app[web.1]: Completed 500 Internal Server Error in 14ms
+2012-10-01T16:33:37+00:00 app[web.1]:     8: 	<%= stylesheet_link_tag    "base", :media => "all" %>
+2012-10-01T16:33:37+00:00 app[web.1]: 
+2012-10-01T16:33:37+00:00 app[web.1]: Started GET "/categories" for 165.123.218.58 at 2012-10-01 16:33:32 +0000
+2012-10-01T16:33:37+00:00 app[web.1]: 
+2012-10-01T16:33:37+00:00 app[web.1]:   app/controllers/categories_controller.rb:7:in `index'
+2012-10-01T16:33:37+00:00 app[web.1]: ActionView::Template::Error (bootstrap.css isn't precompiled):
+2012-10-01T16:33:37+00:00 app[web.1]:     5: 
+2012-10-01T16:33:37+00:00 app[web.1]: 
+2012-10-01T16:33:37+00:00 app[web.1]:     4: 	<title>Coding Qs</title>
+2012-10-01T16:33:37+00:00 app[web.1]:     6: 	<%= stylesheet_link_tag    "application", :media => "all" %>
+2012-10-01T16:33:37+00:00 app[web.1]:   app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__1408349974170978077_26350480'
+2012-10-01T16:33:37+00:00 app[web.1]:     9: 	<%= stylesheet_link_tag    "chosen", :media => "all" %>
+2012-10-01T16:33:37+00:00 app[web.1]:     10: 	<%= stylesheet_link_tag    "style", :media => "all" %>
+2012-10-01T16:38:10+00:00 heroku[router]: Error H16 (Redirect to herokuapp.com) -> GET cqs.herokuapp.com/ dyno= queue= wait= service= status=301 bytes=
+2012-10-01T16:38:10+00:00 app[web.1]: 
+2012-10-01T16:38:10+00:00 app[web.1]: Processing by QuestionsController#index as HTML
+2012-10-01T16:38:10+00:00 app[web.1]: Completed 500 Internal Server Error in 4ms
+2012-10-01T16:38:10+00:00 app[web.1]: ActionView::Template::Error (bootstrap.css isn't precompiled):
+2012-10-01T16:38:10+00:00 app[web.1]:     6: 	<%= stylesheet_link_tag    "application", :media => "all" %>
+2012-10-01T16:38:10+00:00 app[web.1]:     9: 	<%= stylesheet_link_tag    "chosen", :media => "all" %>
+2012-10-01T16:38:10+00:00 app[web.1]:     5: 
+2012-10-01T16:38:10+00:00 app[web.1]:     7: 	<%= stylesheet_link_tag    "bootstrap", :media => "all" %>
+2012-10-01T16:38:10+00:00 heroku[router]: GET cqs.herokuapp.com/ dyno=web.1 queue=0 wait=0ms service=15ms status=500 bytes=643
+2012-10-01T16:38:10+00:00 app[web.1]: 
+2012-10-01T16:38:10+00:00 app[web.1]: Started GET "/" for 165.123.218.58 at 2012-10-01 16:38:10 +0000
+2012-10-01T16:38:10+00:00 app[web.1]:   Rendered questions/index.html.erb within layouts/application (0.3ms)
+2012-10-01T16:38:10+00:00 app[web.1]: 
+2012-10-01T16:38:10+00:00 app[web.1]: 
+2012-10-01T16:38:10+00:00 app[web.1]:     4: 	<title>Coding Qs</title>
+2012-10-01T16:38:10+00:00 app[web.1]: 
+2012-10-01T16:38:10+00:00 app[web.1]:     8: 	<%= stylesheet_link_tag    "base", :media => "all" %>
+2012-10-01T16:38:10+00:00 app[web.1]:     10: 	<%= stylesheet_link_tag    "style", :media => "all" %>
+2012-10-01T16:38:10+00:00 app[web.1]:   app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__1408349974170978077_26350480'
+2012-10-01T16:38:10+00:00 app[web.1]:   app/controllers/questions_controller.rb:7:in `index'
+2012-10-01T16:38:11+00:00 heroku[router]: GET cqs.herokuapp.com/favicon.ico dyno=web.1 queue=0 wait=0ms service=7ms status=304 bytes=0
+2012-10-01T16:41:06+00:00 app[web.1]: 
+2012-10-01T16:41:06+00:00 app[web.1]:   Rendered questions/index.html.erb within layouts/application (0.3ms)
+2012-10-01T16:41:06+00:00 app[web.1]: Completed 500 Internal Server Error in 4ms
+2012-10-01T16:41:06+00:00 app[web.1]: 
+2012-10-01T16:41:06+00:00 app[web.1]:     6: 	<%= stylesheet_link_tag    "application", :media => "all" %>
+2012-10-01T16:41:06+00:00 app[web.1]: Started GET "/" for 165.123.218.58 at 2012-10-01 16:41:06 +0000
+2012-10-01T16:41:06+00:00 app[web.1]: Processing by QuestionsController#index as HTML
+2012-10-01T16:41:06+00:00 app[web.1]:   app/controllers/questions_controller.rb:7:in `index'
+2012-10-01T16:41:06+00:00 app[web.1]:     4: 	<title>Coding Qs</title>
+2012-10-01T16:41:06+00:00 app[web.1]:     7: 	<%= stylesheet_link_tag    "bootstrap", :media => "all" %>
+2012-10-01T16:41:06+00:00 app[web.1]:     8: 	<%= stylesheet_link_tag    "base", :media => "all" %>
+2012-10-01T16:41:06+00:00 app[web.1]:   app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__1408349974170978077_26350480'
+2012-10-01T16:41:06+00:00 app[web.1]: 
+2012-10-01T16:41:06+00:00 app[web.1]:     10: 	<%= stylesheet_link_tag    "style", :media => "all" %>
+2012-10-01T16:41:06+00:00 app[web.1]: ActionView::Template::Error (bootstrap.css isn't precompiled):
+2012-10-01T16:41:06+00:00 app[web.1]:     9: 	<%= stylesheet_link_tag    "chosen", :media => "all" %>
+2012-10-01T16:41:06+00:00 app[web.1]: 
+2012-10-01T16:41:06+00:00 app[web.1]: 
+2012-10-01T16:41:06+00:00 app[web.1]:     5: 
+2012-10-01T16:41:06+00:00 heroku[router]: GET cqs.herokuapp.com/ dyno=web.1 queue=0 wait=0ms service=15ms status=500 bytes=643
+2012-10-01T16:41:07+00:00 heroku[router]: GET cqs.herokuapp.com/favicon.ico dyno=web.1 queue=0 wait=0ms service=30ms status=304 bytes=0
+2012-10-01T17:01:07+00:00 heroku[router]: Error H16 (Redirect to herokuapp.com) -> GET cqs.herokuapp.com/ dyno= queue= wait= service= status=301 bytes=
+2012-10-01T17:01:07+00:00 app[web.1]: 
+2012-10-01T17:01:07+00:00 app[web.1]: 
+2012-10-01T17:01:07+00:00 app[web.1]: Started GET "/" for 66.208.236.221 at 2012-10-01 17:01:07 +0000
+2012-10-01T17:01:07+00:00 app[web.1]: Processing by QuestionsController#index as HTML
+2012-10-01T17:01:07+00:00 app[web.1]:   Rendered questions/index.html.erb within layouts/application (0.4ms)
+2012-10-01T17:01:07+00:00 app[web.1]: ActionView::Template::Error (bootstrap.css isn't precompiled):
+2012-10-01T17:01:07+00:00 app[web.1]: Completed 500 Internal Server Error in 6ms
+2012-10-01T17:01:07+00:00 app[web.1]:     7: 	<%= stylesheet_link_tag    "bootstrap", :media => "all" %>
+2012-10-01T17:01:07+00:00 app[web.1]: 
+2012-10-01T17:01:07+00:00 app[web.1]:     5: 
+2012-10-01T17:01:07+00:00 app[web.1]:     4: 	<title>Coding Qs</title>
+2012-10-01T17:01:07+00:00 app[web.1]:     6: 	<%= stylesheet_link_tag    "application", :media => "all" %>
+2012-10-01T17:01:07+00:00 app[web.1]:   app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__1408349974170978077_26350480'
+2012-10-01T17:01:07+00:00 app[web.1]:     8: 	<%= stylesheet_link_tag    "base", :media => "all" %>
+2012-10-01T17:01:07+00:00 app[web.1]:     9: 	<%= stylesheet_link_tag    "chosen", :media => "all" %>
+2012-10-01T17:01:07+00:00 app[web.1]:     10: 	<%= stylesheet_link_tag    "style", :media => "all" %>
+2012-10-01T17:01:07+00:00 app[web.1]:   app/controllers/questions_controller.rb:7:in `index'
+2012-10-01T17:01:07+00:00 app[web.1]: 
+2012-10-01T17:01:07+00:00 app[web.1]: 
+2012-10-01T17:01:07+00:00 heroku[router]: GET cqs.herokuapp.com/ dyno=web.1 queue=0 wait=0ms service=27ms status=500 bytes=643
+2012-10-01T17:01:07+00:00 heroku[router]: GET cqs.herokuapp.com/favicon.ico dyno=web.1 queue=0 wait=0ms service=31ms status=200 bytes=0
+2012-10-01T17:10:03+00:00 heroku[router]: Error H16 (Redirect to herokuapp.com) -> GET cqs.herokuapp.com/ dyno= queue= wait= service= status=301 bytes=
+2012-10-01T17:10:03+00:00 app[web.1]: 
+2012-10-01T17:10:03+00:00 app[web.1]: Started GET "/" for 128.91.131.111 at 2012-10-01 17:10:03 +0000
+2012-10-01T17:10:03+00:00 app[web.1]: 
+2012-10-01T17:10:03+00:00 app[web.1]: Processing by QuestionsController#index as HTML
+2012-10-01T17:10:03+00:00 app[web.1]: Completed 500 Internal Server Error in 5ms
+2012-10-01T17:10:03+00:00 app[web.1]:   Rendered questions/index.html.erb within layouts/application (0.3ms)
+2012-10-01T17:10:03+00:00 app[web.1]: 
+2012-10-01T17:10:03+00:00 app[web.1]: ActionView::Template::Error (bootstrap.css isn't precompiled):
+2012-10-01T17:10:03+00:00 app[web.1]:     4: 	<title>Coding Qs</title>
+2012-10-01T17:10:03+00:00 app[web.1]:     5: 
+2012-10-01T17:10:03+00:00 app[web.1]:     6: 	<%= stylesheet_link_tag    "application", :media => "all" %>
+2012-10-01T17:10:03+00:00 app[web.1]:     7: 	<%= stylesheet_link_tag    "bootstrap", :media => "all" %>
+2012-10-01T17:10:03+00:00 app[web.1]:     8: 	<%= stylesheet_link_tag    "base", :media => "all" %>
+2012-10-01T17:10:03+00:00 app[web.1]:     9: 	<%= stylesheet_link_tag    "chosen", :media => "all" %>
+2012-10-01T17:10:03+00:00 app[web.1]:     10: 	<%= stylesheet_link_tag    "style", :media => "all" %>
+2012-10-01T17:10:03+00:00 heroku[router]: GET cqs.herokuapp.com/ dyno=web.1 queue=0 wait=0ms service=21ms status=500 bytes=643
+2012-10-01T17:10:03+00:00 app[web.1]:   app/controllers/questions_controller.rb:7:in `index'
+2012-10-01T17:10:03+00:00 app[web.1]: 
+2012-10-01T17:10:03+00:00 app[web.1]:   app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__1408349974170978077_26350480'
+2012-10-01T17:10:03+00:00 app[web.1]: 
+2012-10-01T17:10:03+00:00 heroku[router]: GET cqs.herokuapp.com/favicon.ico dyno=web.1 queue=0 wait=0ms service=241ms status=200 bytes=0
