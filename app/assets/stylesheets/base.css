@@ -1,0 +1,66 @@
+@CHARSET "UTF-8";
+* {padding: 0px; margin: 0px;}
+a:hover {text-decoration: none; }
+small {
+  padding-left: 5px;
+}
+.strike {
+  text-decoration: line-through;
+}
+.red {
+  color: #EC1F0A;
+}
+.hilight {
+  background-color: #FFFBCC;
+}
+.recipes label {
+  cursor: pointer;
+}
+.recipes .info span {
+  color: #08C;
+}
+.recipes .help-block {
+  margin-bottom: 14px;
+}
+.index-column {
+  border-bottom: 2px #eee dashed;
+  margin-bottom: 10px;
+  /*margin-left: 0;
+  padding-left: 19px;
+  border-left: 1px solid #eee;*/
+  /* border-right: solid 1px #ccc; */
+}
+.ingredient td {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}
+tr.even {
+  background-color: #f1f1f1;
+}
+.header {
+	padding-bottom: 20px;
+}
+#wrapper {
+  width: 960px;
+  margin: 0px auto;
+  padding: 50px;
+}
+#description {
+	padding: 10px;
+	width: 50%;
+  font-size: 20px;
+}
+footer {
+	margin-top: 300px;
+}
+tr:hover {
+	background-color: #f5f5f5;
+}
+.ingredient .quantity {
+  cursor: pointer;
+}
+.action {
+  width: 100px;
+}

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Qtext:</b>
+  <%= @question.qtext %>
+</p>
+
+<p>
+  <b>Difficulty:</b>
+  <%= @question.difficulty %>
+</p>
+
+<p>
+  <b>Votes:</b>
+  <%= @question.votes %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @question.Category %>
+</p>
+
+<p>
+  <b>Language:</b>
+  <%= @question.Language %>
+</p>
+
+
+<%= link_to 'Edit', edit_question_path(@question) %> |
+<%= link_to 'Back', questions_path %>

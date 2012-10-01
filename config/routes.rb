@@ -1,4 +1,15 @@
 CodingQs::Application.routes.draw do
+
+  root :to => 'Questions#index'
+
+  resources :users
+
+  resources :questions
+
+  resources :categories
+
+  resources :languages
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
