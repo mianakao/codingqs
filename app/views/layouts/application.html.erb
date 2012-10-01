@@ -16,7 +16,7 @@
 	<%= javascript_include_tag "jquery-1.7.1.min" %>
 	<%= javascript_include_tag "ready" %>
 	<%= javascript_include_tag "spinner" %>
-	<%= javascript_include_tag "table" %><!---->
+	<%= javascript_include_tag "table" %>
 
 	<%= csrf_meta_tags %>
 </head>
@@ -29,42 +29,11 @@
 			  <a href="http://codingQs.heroku.com" class="brand"><span>Coding Qs</span></a>
 			  <div class="nav-collapse">
 				<ul class="nav">
-				  <li id="browse"><a href="<?php echo ROOT ?>/list.php">List Meals</a></li>
-				  <li id="build"><a href="<?php echo ROOT ?>/buildmeal.php">Build a Meal</a></li>
-				  <li class="dropdown" id="addmenu">
-					<a class="dropdown-toggle" data-toggle="dropbox" href="addmenu">
-					  Add<b class="caret"></b>
-					</a>
-					<ul class="dropdown-menu">
-						  <li id="addDish"><a href="<?php echo ROOT ?>/add/dish.php">Dish</a></li>
-						  <li id="addRecipe"><a href="<?php echo ROOT ?>/add/recipe.php">Recipe</a></li>
-						  <li id="addIngredient"><a href="<?php echo ROOT ?>/add/ingredient.php">Ingredient</a></li>
-					</ul>
-				  </li>
-				  <li class="dropdown" id="browsemenu">
-					<a class="dropdown-toggle" data-toggle="dropbox" href="browsemenu">
-					  Browse Recipes<b class="caret"></b>
-					</a>
-					<ul class="dropdown-menu">
-						  <li id="browseByCuisine"><a href="<?php echo ROOT ?>/browseByCuisine.php">By Cuisine</a></li>
-						  <li id="browseByDish"><a href="<?php echo ROOT ?>/browseByDish.php">By Dish</a></li>
-						  <li id="browseByDiet"><a href="<?php echo ROOT ?>/browseByDiet.php">By Diet</a></li>
-					</ul>
-				  </li>		  
-				  <li id="yourRecipes"><a href="<?php echo ROOT ?>/recipes.php">Your Recipes</a></li>
-				  <script type="text/javascript">
-					$(".dropdown-toggle").dropdown();
-				  </script>
+				  <li id="questions"><a href="/">Questions</a></li>
+				  <li id="users"><a href="/users">Users</a></li>
+				  <li id="categories"><a href="/categories">Categories</a></li>
+				  <li id="languages"><a href="/languages">Languages</a></li>
 				</ul>
-				<div class="pull-right">
-				  <ul class="nav">
-					<?php if(isset($_SESSION["userID"])) { ?>
-					  <li><a onclick="FB.logout()" href="<?php echo ROOT ?>/logout.php">Log out</a></li>
-					<?php } else { ?>
-					  <li id="login"><a href="<?php echo ROOT ?>/login.php">Log in</a></li>
-					<?php } ?>
-				  </ul>
-				</div>
 			  </div><!-- /.nav-collapse -->
 			</div><!-- /.container -->
 		  </div><!-- /.navbar-inner -->
