@@ -25,6 +25,7 @@ class QuestionsController < ApplicationController
   # GET /questions/new.json
   def new
     @question = Question.new
+    @languages = Language.all
 
     respond_to do |format|
       format.html # new.html.erb
