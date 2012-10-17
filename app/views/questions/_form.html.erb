@@ -12,28 +12,27 @@
   <% end %>
   
   <div class="field control-group">
-    <div class="control-label"><%= f.label :qtext%></div>
+    <div class="control-label"><%= f.label :qtext %></div>
     <div class="controls"><%= f.text_area :qtext, :size => "60x3" %></div>
   </div>
   <div class="field control-group">
-    <div class="control-label"><%= f.label :difficulty %></div>
-    <div class="controls"><%= f.number_field :difficulty %></div>
+  	<div class="control-label"><%= f.label :difficulty%></div>
+	<div class="controls">
+	  	<label class="radio inline"><%= f.radio_button :difficulty, "1" %>1</label>
+	  	<label class="radio inline"><%= f.radio_button :difficulty, "2" %>2</label>
+		<label class="radio inline"><%= f.radio_button :difficulty, "3" %>3</label>
+	  	<label class="radio inline"><%= f.radio_button :difficulty, "4" %>4</label>
+	  	<label class="radio inline"><%= f.radio_button :difficulty, "5" %>5</label>
+  	</div>
   </div>
   <div class="field control-group">
-    <div class="control-label"><%= f.label :Category %></div>
-    <div class="controls"><%= f.text_field :Category %></div>
+    <div class="control-label"><%= f.label :category %></div>
+    <div class="controls"><%= f.text_field :category %></div>
   </div>
   <div class="field control-group">
-    <div class="control-label"><%= f.label :Language %></div>
+    <div class="control-label"><%= f.label :language_id %></div>
     <div class="controls">
-    	<select>
-    		<option id="1">Python</option>
-    		<option id="2">Java</option>
-    	</select>
-<!-- adding %= and uncommenting gives this error and I'm not sure why 
-	undefined method `map' for nil:NilClass     
-also, how case sensitive is Ruby? It seems that the code in class has lower case where I have capital.
-	 <f.collection_select :Language_id, @Languages, :id, :name %>-->
+    	<%= f.collection_select :language_id, @languages, :id, :name%>
     </div>
   </div>
   <div class="form-actions">

@@ -4,12 +4,12 @@ class CreateQuestions < ActiveRecord::Migration
       t.text :qtext
       t.integer :difficulty
       t.integer :votes
-      t.belongs_to :Category
-      t.belongs_to :Language
+      t.belongs_to :category
+      t.belongs_to :language
 
       t.timestamps
     end
-    add_index :questions, :Category_id
-    add_index :questions, :Language_id
+    add_index :questions, :category_id
+    add_index :questions, :language_id
   end
 end

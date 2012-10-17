@@ -30,14 +30,14 @@ ActiveRecord::Schema.define(:version => 20121001143913) do
     t.text     "qtext"
     t.integer  "difficulty"
     t.integer  "votes"
-    t.integer  "Category_id"
-    t.integer  "Language_id"
+    t.integer  "category_id"
+    t.integer  "language_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
 
-  add_index "questions", ["Category_id"], :name => "index_questions_on_Category_id"
-  add_index "questions", ["Language_id"], :name => "index_questions_on_Language_id"
+  add_index "questions", ["category_id"], :name => "index_questions_on_category_id"
+  add_index "questions", ["language_id"], :name => "index_questions_on_language_id"
 
   create_table "users", :force => true do |t|
     t.string   "name"
