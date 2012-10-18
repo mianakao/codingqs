@@ -1,6 +1,12 @@
 class QuestionsController < ApplicationController
   # GET /questions
   # GET /questions.json
+  
+  before_filter do
+    @languages = Language.all
+    @categories = Category.all
+  end
+  
   def index
     @questions = Question.all
 
@@ -25,7 +31,6 @@ class QuestionsController < ApplicationController
   # GET /questions/new.json
   def new
     @question = Question.new
-    @languages = Language.all
 
     respond_to do |format|
       format.html # new.html.erb

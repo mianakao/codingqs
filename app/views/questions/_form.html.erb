@@ -26,8 +26,11 @@
   	</div>
   </div>
   <div class="field control-group">
-    <div class="control-label"><%= f.label :category %></div>
-    <div class="controls"><%= f.text_field :category %></div>
+    <div class="control-label"><%= f.label :category_id %></div>
+    <div class="controls">
+    	<%= f.collection_select :category_id, @categories, :id, :name%>
+    	<!--<f.text_field :category %>-->
+    </div>
   </div>
   <div class="field control-group">
     <div class="control-label"><%= f.label :language_id %></div>
