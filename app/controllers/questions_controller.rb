@@ -5,10 +5,11 @@ class QuestionsController < ApplicationController
   before_filter do
     @languages = Language.all
     @categories = Category.all
+    
   end
   
   def index
-    @questions = Question.all
+    @questions = Question.good
 
     respond_to do |format|
       format.html # index.html.erb
