@@ -5,7 +5,12 @@ class Question < ActiveRecord::Base
   
   validates :qtext, presence: true
   
+  # rating
   scope :good, where('votes > ?', 10)
+  
+  # difficulty
+  scope :hard, where('difficulty = ?', 4)
+  scope :medium, where('difficulty = ?', 3)
   
   def language_name
     language.name if language
