@@ -5,6 +5,8 @@ class Question < ActiveRecord::Base
   
   validates :qtext, presence: true
   
+  scope :good, where('votes > ?', 10)
+  
   def language_name
     language.name if language
   end
