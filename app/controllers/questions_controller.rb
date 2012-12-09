@@ -9,7 +9,7 @@ class QuestionsController < ApplicationController
   end
   
   def index
-    @questions = Question.good
+    @questions = Question.all
 
     respond_to do |format|
       format.html # index.html.erb
