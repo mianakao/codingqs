@@ -11,10 +11,6 @@ User.create name: 'Mike Patterson',
             password: 'test1234',
             password_confirmation: 'test1234'
 
-Admin.create email: 'mikepatterson77+admin@gmail.com',
-             password: '117puzaw9',
-             password_confirmation: '117puzaw9'
-
 threads_locks  = Category.create name: 'Threads and Locks'
 databases      = Category.create name: 'Databases'
 testing        = Category.create name: 'Testing'
