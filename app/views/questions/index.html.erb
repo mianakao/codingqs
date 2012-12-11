@@ -1,4 +1,4 @@
-<h1>Listing questions</h1>
+<h1>Questions</h1>
 
 <table class="table table-condensed table-striped table-hover">
   <tr>
@@ -8,13 +8,30 @@
     	Votes
     	</a>
     </th>
-    <th class="span1">Category</th>
-    <th class="span5">Question</th>
-    <th class="span1">Difficulty</th>
-    <th class="span1">Language</th>
-    <th class="span1"></th>
-    <th class="span1"></th>
-    <th class="span1"></th>
+    <th class="span1">
+    	<a href="#" role="button" class="btn popover-test" rel="popover" data-placement="top" 
+    	data-content="The category that the question falls into.">
+    	Category
+    	</a>
+    </th>
+    <th class="span5">
+    	<a href="#" role="button" class="btn popover-test" rel="popover" data-placement="top" 
+    	data-content="The text of the question itself.">
+    	Question
+    	</a>
+    </th>
+    <th class="span1">
+    	<a href="#" role="button" class="btn popover-test" rel="popover" data-placement="top" 
+    	data-content="The average difficulty of a question.">
+    	Difficulty
+    	</a>
+    </th>
+    <th class="span1">
+    	<a href="#" role="button" class="btn popover-test" rel="popover" data-placement="top" 
+    	data-content="The recommended language(s) for the question to be answered in.">
+    	Language
+    	</a>
+    </th>
   </tr>
 
 <% @questions.each do |question| %>
@@ -24,9 +41,6 @@
     <td class="span5"><%= question.qtext %></td>
     <td class="span1"><%= question.difficulty %></td>
     <td class="span1"><%= question.language_name %></td>
-    <td class="span1"><%= link_to 'Show', question %></td>
-    <td class="span1"><%= link_to 'Edit', edit_question_path(question) %></td>
-    <td class="span1"><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>

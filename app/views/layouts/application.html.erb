@@ -9,13 +9,7 @@
 	<%= javascript_include_tag "application" %>
 
 	<%= csrf_meta_tags %>
-	
-	<!--
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$('.btn').popover(options)
-		});
-	</script>-->
+
 </head>
 
 <body>
@@ -26,11 +20,19 @@
 			  <a href="/" class="brand"><span>Coding Qs</span></a>
 			  <div class="nav-collapse">
 				<ul class="nav">
-				  <li id="questions"><a href="/">Questions</a></li>
-				  <li id="users"><a href="/users">Users</a></li>
-				  <li id="categories"><a href="/categories">Categories</a></li>
-				  <li id="languages"><a href="/languages">Languages</a></li>
+				  <li id="questions"><%= link_to "Questions", questions_path %></li>
+				  <li id="users"><%= link_to "Users", users_path %></li>
 				</ul>
+              <% if user_signed_in? %>
+              <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'btn btn-inverse pull-right' %>
+              <% else %>
+              <%= form_for(User.new, url: session_path(:user), html: { class: 'navbar-form pull-right' }) do |f| %>
+              <%= f.email_field :email, placeholder: "Email" %>
+              <%= f.password_field :password, placeholder: "Password" %>
+              <%= f.submit 'Sign in', class: 'btn btn-primary' %>
+              <% end %>
+              <% end %>
+				
 			  </div><!-- /.nav-collapse -->
 			</div><!-- /.container -->
 		  </div><!-- /.navbar-inner -->
@@ -38,9 +40,7 @@
 
 		<div class="container">
 
-			<% if user_signed_in? %>  
-				<%= link_to 'Logout', destroy_user_session_path, method: :delete %>
-			<% end %>
+			
 			<% if alert %>
 				<div class="alert alert-error"><%= alert %></div>
 			<% end %>
