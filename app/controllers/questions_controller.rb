@@ -1,7 +1,7 @@
 class QuestionsController < ApplicationController
   # GET /questions
   # GET /questions.json
-  
+  before_filter :authenticate_user!
   before_filter do
     @languages = Language.all
     @categories = Category.all
