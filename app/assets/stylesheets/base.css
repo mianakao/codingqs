@@ -46,3 +46,16 @@ tr:hover {
 .action {
   width: 100px;
 }
+th .current {
+  padding-right: 18px;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+th .asc {
+  background-image: url(/images/arrow_up.png);
+}
+
+th .desc {
+  background-image: url(/images/arrow_down.png);
+}

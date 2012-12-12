@@ -3143,6 +3143,10 @@ button.close {
   margin-top: 0;
 }
 
+.btn-xsmall {
+    padding: 0px 4px;
+}
+
 .btn-mini {
   padding: 2px 6px;
   font-size: 11px;

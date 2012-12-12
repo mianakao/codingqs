@@ -1,34 +1,26 @@
+<%= link_to 'Create a question', new_question_path, class: 'btn btn-primary' %> <br /><br />
+
 <table class="table table-condensed table-striped table-hover">
   <tr>
   	<th class="span1">
-    	<a href="#" role="button" class="btn popover-test" rel="popover" data-placement="top" 
-    	data-content="Up votes increase this. Down votes decrease it.">
-    	Votes
-    	</a>
+  		<div class="btn btn-xsmall"><%= sortable "votes", "Votes"%></div>
+    	<%= helptxt "Up votes increase this. Down votes decrease it." %>
     </th>
     <th class="span1">
-    	<a href="#" role="button" class="btn popover-test" rel="popover" data-placement="top" 
-    	data-content="The category that the question falls into.">
-    	Category
-    	</a>
+    	<div class="btn btn-xsmall"><%= sortable "category_id", "Category" %></div>
+    	<%= helptxt "The category that the question falls into." %>
     </th>
     <th class="span5">
-    	<a href="#" role="button" class="btn popover-test" rel="popover" data-placement="top" 
-    	data-content="The text of the question itself.">
-    	Question
-    	</a>
+    	<div class="btn btn-xsmall"><%= sortable "qtext", "Question" %></div>
+    	<%= helptxt "The text of the question itself." %>
     </th>
     <th class="span1">
-    	<a href="#" role="button" class="btn popover-test" rel="popover" data-placement="top" 
-    	data-content="The average difficulty of a question.">
-    	Difficulty
-    	</a>
+    	<div class="btn btn-xsmall"><%= sortable "difficulty", "Difficulty" %></div>
+    	<%= helptxt "The average difficulty of a question." %>
     </th>
     <th class="span1">
-    	<a href="#" role="button" class="btn popover-test" rel="popover" data-placement="top" 
-    	data-content="The recommended language(s) for the question to be answered in.">
-    	Language
-    	</a>
+    	<div class="btn btn-xsmall"><%= sortable "language_id", "Language" %></div>
+    	<%= helptxt "The recommended language(s) for the question to be answered in." %>
     </th>
   </tr>
 
@@ -43,6 +35,3 @@
 <% end %>
 </table>
 
-<br />
-
-<%= link_to 'New Question', new_question_path %>

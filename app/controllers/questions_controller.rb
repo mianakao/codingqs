@@ -1,15 +1,16 @@
 class QuestionsController < ApplicationController
+  helper_method :sort_column, :sort_direction
   # GET /questions
   # GET /questions.json
   before_filter :authenticate_user!
+  
   before_filter do
     @languages = Language.all
     @categories = Category.all
-    
   end
   
   def index
-    @questions = Question.all
+    @questions = Question.order(sort_column + " " + sort_direction)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -87,4 +88,15 @@ class QuestionsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  private
+  
+  def sort_column
+    Question.column_names.include?(params[:sort]) ? params[:sort] : "difficulty"
+  end
+  
+  def sort_direction
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+  end
+
 end

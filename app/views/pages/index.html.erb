@@ -5,16 +5,16 @@
 <h1>Welcome to <span class="has-title" title="Coding Qs">Coding Qs</span>!</h1>
 
 <p>
-  Got an issue on <%= link_to "Github", "http://github.com" %> you want fixed?
+  Have a technical interview you need to prepare for?
 </p>
 
 <p>
-  Post it here and put your money where your "+1" is.
+  
 </p>
 
 <% if user_signed_in? %>
 <p>
-  <%= link_to "Create a question", new_question_path, class: "btn btn-primary" %> to get started!
+  <%= link_to "Answer a question", questions_path, class: "btn btn-primary" %> to get started!
 </p>
 <% else %>
 <p>
