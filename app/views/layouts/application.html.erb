@@ -24,7 +24,7 @@
 				<ul class="nav">
 				  <li id="questions"><%= link_to "Questions", questions_path %></li>
 				  <% if user_signed_in? %>
-				  <li id="users"><%= link_to "Profile", edit_user_path(current_user.id) %></li>
+				  <li id="users"><%= link_to current_user.name, edit_user_path(current_user.id) %></li>
 				  <% end %>
 				</ul>
 	              <% if user_signed_in? %>
