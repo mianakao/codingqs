@@ -6,11 +6,15 @@ class Question < ActiveRecord::Base
   validates :qtext, presence: true
   
   # rating
-  scope :good, where('votes > ?', 10)
+  scope :top_five, order('votes desc').limit(5)
   
   # difficulty
-  scope :hard, where('difficulty = ?', 4)
-  scope :medium, where('difficulty = ?', 3)
+  scope :xhard, where('difficulty = ?', 5)
+  scope :hard,  where('difficulty = ?', 4)
+  scope :med,   where('difficulty = ?', 3)
+  scope :easy,  where('difficulty = ?', 2)
+  scope :xeasy, where('difficulty = ?', 1)
+
   
   def language_name
     language.name if language

@@ -1,5 +1,18 @@
 <div class="pull-right">
-<img class="media-object" src="http://placekitten.com/400/200">
+<% @questions = Question.top_five %>
+<table class="table table-condensed table-striped table-hover">
+  <tr>
+    <th class="span6">
+    	<div class="span2"></div>
+		<div class="span4">Top 5 Questions</div>
+    </th>
+  </tr>
+<% @questions.each do |question| %>
+  <tr>
+  	<td class="span6"><%= question.qtext %></td>
+  </tr>
+<% end %>
+</table>
 </div>
 
 <h1>Welcome to <span class="has-title" title="Coding Qs">Coding Qs</span>!</h1>

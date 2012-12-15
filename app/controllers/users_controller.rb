@@ -1,8 +1,10 @@
 class UsersController < ApplicationController
   # GET /users
   # GET /users.json
+  before_filter :authenticate_user!
+
   def index
-    @users = User.all
+    @users = User.find(current_user)
 
     respond_to do |format|
       format.html # index.html.erb

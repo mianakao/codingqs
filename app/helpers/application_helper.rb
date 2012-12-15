@@ -10,4 +10,9 @@ module ApplicationHelper
     @str = "<a href='#' role='button' class='btn btn-xsmall popover-test' rel='popover' data-placement='top' data-content='" + text + "'>?</a>"
     return @str.html_safe
   end
+  
+  def user
+    current_user
+  end
+  
 end

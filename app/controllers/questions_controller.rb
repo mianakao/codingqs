@@ -2,7 +2,6 @@ class QuestionsController < ApplicationController
   helper_method :sort_column, :sort_direction
   # GET /questions
   # GET /questions.json
-  before_filter :authenticate_user!
   
   before_filter do
     @languages = Language.all
